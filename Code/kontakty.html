@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Dandelo</title>
+    <link rel="icon" href="imige/dandelo V1 zluta RGB 1.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="hlavicka-vnitrni">
+            <a class="logo-odkaz" href="index.html">
+                <img src="imige/dandelo V1 zluta RGB 1.svg" class="logo" alt="Logo Dandelo" width="100" height="100">
+                <div class="nazev-firmy">
+                    <p class="nazev-hlavni">Dandelo</p>
+                    <p>Účetnictví nejen pro neziskovky</p>
+                </div>
+            </a>
+            <div class="hlavicka-ikony">
+                <a href="kontakty.html">
+                    <img class="ikona-btn" src="imige/telefon.svg" alt="Kontakt – telefon" width="55" height="55">
+                </a>
+                <button class="hamburger" id="menuBtn" aria-label="Otevřít menu">
+                    <img class="ikona-btn" src="imige/Hamburger menu.svg" alt="" width="55" height="55">
+                </button>
+            </div>
+        </div>
+        <nav>
+            <menu class="menu" id="menu">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="o-nas.html">O nás</a></li>
+                <li><a href="klienti.html">Klienti</a></li>
+                <li><a href="kontakty.html">Kontakt</a></li>
+            </menu>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="skryty">Kontaktní informace – Dandelo</h1>
+
+        <div class="kontakt-obal">
+            <div class="kontakt-mriezka">
+                <div class="kontakt-karta">
+                    <div class="karta-foto">
+                        <img src="imige/kontakty/osoba_1.png" alt="Blanka Radová, jednatelka" width="170" height="170">
+                    </div>
+                    <div class="karta-text">
+                        <h2>Blanka Radová</h2>
+                        <p class="karta-pozice">jednatelka a hlavní účetní</p>
+                        <div class="karta-kontakt">
+                            <a href="tel:+420728205556">+420 728 205 556</a>
+                            <a href="mailto:blanka.radova@dandelo.cz">blanka.radova@dandelo.cz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kontakt-karta">
+                    <div class="karta-foto">
+                        <img src="imige/kontakty/osoba_2.png" alt="Ing. Kateřina Hrdličková, jednatelka" width="170" height="170">
+                    </div>
+                    <div class="karta-text">
+                        <h2>Ing. Kateřina Hrdličková</h2>
+                        <p class="karta-pozice">jednatelka a správce webu</p>
+                        <div class="karta-kontakt">
+                            <a href="tel:+420737364919">+420 737 364 919</a>
+                            <a href="mailto:katerina.hrdlickova@dandelo.cz">katerina.hrdlickova@dandelo.cz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kontakt-karta">
+                    <div class="karta-foto">
+                        <img src="imige/kontakty/osoba_3.png" alt="Eliška Pamp, virtuální asistentka" width="170" height="170">
+                    </div>
+                    <div class="karta-text">
+                        <h2>Eliška Pamp</h2>
+                        <p class="karta-pozice">virtuální asistentka</p>
+                        <div class="karta-kontakt">
+                            <a href="mailto:info@dandelo.cz">info@dandelo.cz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- statický formulář - obsluha není potřeba -->
+            <div class="formular-sekce">
+                <h2>Napište nám</h2>
+                <div class="formular">
+                    <div>
+                        <label for="jmeno">Jméno a příjmení</label>
+                        <input type="text" id="jmeno" name="jmeno" placeholder="Jan Novák">
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="vas@email.cz">
+                    </div>
+                    <div>
+                        <label for="zprava">Zpráva</label>
+                        <textarea id="zprava" name="zprava" placeholder="Vaše zpráva..."></textarea>
+                    </div>
+                    <button type="button" class="btn-odeslat">Odeslat</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="pata-vnitrni">
+            <div class="pata-logo">
+                <img src="imige/dandelo V1 zluta RGB 1.svg" alt="Logo Dandelo" width="120" height="120">
+            </div>
+            <div class="pata-info">
+                <h3>Dandelo</h3>
+                <p class="pata-podnadpis">Účetnictví nejen pro neziskovky</p>
+                <div class="pata-kontakt">
+                    <a href="tel:+420910190008">+420 910 190 008</a>
+                    <a href="mailto:info@uol.cz">info@uol.cz</a>
+                </div>
+                <p class="pata-copyright">© Copyright 2026 UOL Účetnictví</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
