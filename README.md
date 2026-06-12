@@ -35,7 +35,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
 | Výstup | Odkaz |
 |---|---|
-| GitHub Pages (live) | [`Doplň odkaz`](#) |
+| GitHub Pages (live) | [`(https://dnadelo.gambaaa.fun/)`](#) |
 | Grafický manuál (Figma / Canva) | [`Doplň odkaz`](#) |
 | Grafický návrh webu (Figma) | [`(https://www.figma.com/design/ERe7Gd23tMu66ambolbQsW/Untitled?node-id=0-1&t=oBwMEI0IAOhP7X02-1)`](#) |
 | Fotografie / média | [`Doplň odkaz`](#) |
