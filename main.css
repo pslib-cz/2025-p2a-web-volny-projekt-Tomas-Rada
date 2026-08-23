@@ -90,14 +90,15 @@ header {
 nav .menu {
     display: flex;
     flex-direction: column;
+    gap: 0;
     list-style: none;
     padding: 0;
-    background-color: var(--oranzova);
     margin-top: 0.75rem;
-    border-radius: 0.5rem;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    border: 1px solid var(--cerna);
+    border-radius: 0.5rem;
     transition: max-height 0.35s ease, opacity 0.3s ease;
 }
 
@@ -106,19 +107,19 @@ nav .menu.otevrene {
     opacity: 1;
 }
 
+nav .menu li + li {
+    border-top: 1px solid var(--cerna);
+}
+
 nav .menu li a {
     display: block;
-    color: var(--bila);
+    color: var(--cerna);
+    background-color: var(--oranzova);
     padding: 0.85rem 1.25rem;
     font-weight: bold;
     font-size: 1rem;
-    border-bottom: 1px solid var(--oranzova-tmavsi);
     text-align: right;
     transition: background-color 0.2s;
-}
-
-nav .menu li:last-child a {
-    border-bottom: none;
 }
 
 nav .menu li a:hover {
@@ -142,8 +143,15 @@ footer {
 
 @media (min-width: 640px) {
     .pata-vnitrni {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: repeat(3, 1fr);
         text-align: left;
+        align-items: start;
+        row-gap: 0.75rem;
+    }
+
+    .pata-vnitrni .pata-copyright {
+        grid-column: 1;
+        grid-row: 2;
     }
 }
 
@@ -189,8 +197,11 @@ footer {
 .swiper {
     position: relative;
     width: 100%;
-    height: 220px;
     overflow: hidden;
+}
+
+.slider-hlavni {
+    height: 220px;
 }
 
 .swiper-wrapper {
@@ -247,6 +258,38 @@ footer {
 
 .swiper-pagination {
     display: none;
+}
+
+.sekce-nadpis {
+    text-align: center;
+    padding: 2rem 1rem 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sekce-nadpis h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nadpis-verzalky {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.sekce-linka {
+    width: 80px;
+    height: 4px;
+    background-color: var(--oranzova);
+    border: none;
+    border-radius: 2px;
+    margin: 0.9rem auto;
+}
+
+.sekce-podnadpis {
+    color: var(--tmave-seda);
+    font-size: 1rem;
 }
 
 .cards {
@@ -347,14 +390,7 @@ footer {
     transform: rotate(8deg) scale(1.07);
 }
 
-.onas-polozka h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
-    line-height: 1.35;
-}
-
-.onas-polozka h2 {
+.onas-uvod {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.6rem;
@@ -366,6 +402,89 @@ footer {
     font-size: 0.95rem;
     line-height: 1.6;
     max-width: 440px;
+}
+
+.statistika {
+    text-align: center;
+    color: var(--tmave-seda);
+    padding: 2rem 1rem;
+}
+
+.statistika-uvod {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.statistika-cislo {
+    font-size: clamp(3rem, 14vw, 6rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.statistika-popis {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.mapa-sekce {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.mapa-sekce img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.reference-sekce {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2.5rem 3rem;
+}
+
+.slider-reference .swiper-slide {
+    height: auto;
+}
+
+.reference-sekce .swiper-button-prev {
+    left: 0;
+}
+
+.reference-sekce .swiper-button-next {
+    right: 0;
+}
+
+.reference-karta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.reference-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.reference-logo img {
+    width: auto;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.reference-text {
+    color: var(--tmave-seda);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
 .kontakt-obal {
@@ -478,11 +597,12 @@ footer {
 }
 
 .formular .btn-odeslat {
-    display: inline-block;
+    display: block;
+    width: 100%;
     background-color: var(--oranzova);
     color: var(--bila);
-    padding: 0.9rem 2.25rem;
-    font-size: 1.05rem;
+    padding: 1rem 1.25rem;
+    font-size: 1.15rem;
     font-weight: bold;
     border-radius: 4px;
     border: none;
@@ -494,47 +614,63 @@ footer {
     background-color: var(--oranzova-tmavsi);
 }
 
-.pata-logo img {
-    width: 80px;
-    height: auto;
-    margin: 0 auto;
+.pata-znacka {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
 }
 
 @media (min-width: 640px) {
-    .pata-logo img {
-        margin: 0;
+    .pata-znacka {
+        justify-content: flex-start;
     }
 }
 
-.pata-info h3 {
+.pata-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.pata-nazev {
     color: var(--oranzova);
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 1;
 }
 
-.pata-podnadpis {
+.pata-nadpis {
+    display: table;
     color: var(--bila);
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    border-bottom: 2px solid var(--oranzova);
+    padding-bottom: 0.3rem;
+    margin: 0 auto 0.75rem;
 }
 
-.pata-kontakt {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-    margin-bottom: 0.75rem;
+@media (min-width: 640px) {
+    .pata-nadpis {
+        margin-inline: 0;
+    }
 }
 
-.pata-kontakt a {
+.pata-email {
     display: inline-block;
     color: var(--oranzova);
     font-size: 0.95rem;
     font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
-.pata-kontakt a:hover {
+.pata-email:hover {
     opacity: 0.8;
+}
+
+.pata-radek {
+    color: #888;
+    font-size: 0.8rem;
+    line-height: 1.5;
 }
 
 .pata-copyright {
@@ -543,20 +679,22 @@ footer {
 }
 
 .chyba-obal {
-    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-inline: -2rem;
+    margin-bottom: 2rem;
 }
 
 .chyba-box {
     background-color: var(--oranzova);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 4rem 2rem;
     width: 100%;
-    min-height: 100%;
 }
 
 .chyba-kod {
@@ -566,12 +704,21 @@ footer {
     line-height: 1;
 }
 
+.chyba-text {
+    color: var(--bila);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+    max-width: 520px;
+    margin-top: 1rem;
+}
+
 @media (min-width: 480px) {
     .logo { width: 70px; }
     .nazev-hlavni { font-size: 1.8rem; }
     .nazev-firmy p:last-child { font-size: 0.85rem; }
     .ikona-btn { width: 46px; }
-    .swiper { height: 280px; }
+    .slider-hlavni { height: 280px; }
 }
 
 @media (min-width: 700px) {
@@ -579,10 +726,11 @@ footer {
     .logo { width: 90px; }
     .nazev-hlavni { font-size: 2.2rem; }
     .nazev-firmy p:last-child { font-size: 1rem; }
-    .swiper { height: 360px; }
+    .slider-hlavni { height: 360px; }
     .cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .karta-ikona { width: 140px; height: 140px; }
     .onas-sekce { grid-template-columns: repeat(3, 1fr); }
+    .onas-polozka { text-align: left; }
     .onas-ikona { width: 150px; height: 150px; }
     .kontakt-mriezka { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .karta-foto img { width: 150px; height: 150px; }
@@ -594,17 +742,23 @@ footer {
     .logo { width: 108px; }
     .ikona-btn { width: 54px; }
     nav .menu li a { font-size: 1.1rem; padding: 1rem 1.35rem; }
-    .swiper { height: 480px; }
+    .slider-hlavni { height: 480px; }
     .cards, .onas-sekce, .kontakt-obal, .pata-vnitrni { max-width: 1240px; }
+    .sekce-nadpis, .mapa-sekce, .reference-sekce { max-width: 1240px; }
     .karta-ikona { width: 160px; height: 160px; }
     .onas-ikona { width: 170px; height: 170px; }
-    .onas-polozka h2 { font-size: 1.25rem; }
+    .onas-uvod { font-size: 1.25rem; }
     .onas-polozka p { font-size: 1.02rem; }
+    .sekce-nadpis h2 { font-size: 2.2rem; }
+    .sekce-podnadpis { font-size: 1.1rem; }
+    .statistika-popis { font-size: 1.6rem; }
+    .reference-text { font-size: 1rem; }
     .card > div:last-child p:first-child { font-size: 1.2rem; }
     .card > div:last-child p:last-child { font-size: 1rem; }
-    .pata-info h3 { font-size: 1.9rem; }
-    .pata-podnadpis { font-size: 1rem; }
-    .pata-kontakt a { font-size: 1.02rem; }
+    .pata-nazev { font-size: 1.9rem; }
+    .pata-nadpis { font-size: 1.15rem; }
+    .pata-email { font-size: 1.02rem; }
+    .pata-radek { font-size: 0.85rem; }
 }
 
 @keyframes vyskoc {

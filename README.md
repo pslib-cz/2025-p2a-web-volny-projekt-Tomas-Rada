@@ -48,10 +48,3 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 
 _Prostor pro vlastní poznámky, zpětnou vazbu, TODO apod._
 
-`grafický manuál 
-  	Vizitka
-	  Razítko
-	  Ochraná známka
-aktualizovaný Web - do 4:00 21.8.
-moonbord - do 4:00 21.8.
-`
