@@ -3,7 +3,7 @@
 > **Jméno a příjmení:** `Tomáš Rada`
 
 > **Název projektu:** `Dandelo`
-
+ 
 ---
 
 ## O projektu
