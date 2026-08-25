@@ -40,7 +40,7 @@ _Shrnutí všech odkazů na jednom místě. Průběžně aktualizujte._
 | GitHub Pages (live) | [`https://dnadelo.gambaaa.fun/`](#) |
 | Grafický manuál (Figma / Canva) | [`https://pslib.sharepoint.com/:b:/s/P2024A.MME-sk2/IQDrGw658BEBQbY5Lg9nxeZ1AVZuwD7kuUS6P1hWkLZ6oTI?e=uvF3ep`](#) |
 | Grafický návrh webu (Figma) | [`https://www.figma.com/design/ERe7Gd23tMu66ambolbQsW/Untitled?node-id=0-1&t=oBwMEI0IAOhP7X02-1`](#) |
-| Fotografie / média | [`https://pslib.sharepoint.com/:f:/s/P2024A.MME-sk2/IgD-nLlwecoLQq2ZKUc0oS17AVdz0QbDcXHL2_3T_psc1nw?e=aeE4x9`](#) |
+| Fotografie / média | [`[https://pslib.sharepoint.com/:f:/s/P2024A.MME-sk2/IgD-nLlwecoLQq2ZKUc0oS17AVdz0QbDcXHL2_3T_psc1nw?e=aeE4x9](https://pslib-cz.github.io/2025-p2a-web-volny-projekt-Tomas-Rada/)`](#) |
 
 ---
 
